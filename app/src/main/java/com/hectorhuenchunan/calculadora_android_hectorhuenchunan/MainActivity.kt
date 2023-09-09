@@ -69,6 +69,10 @@ class MainActivity : AppCompatActivity() {
                 oper = 4
             }
         }
+
+        fun nuevafuncion (view: View){
+
+        }
     }
 
 
