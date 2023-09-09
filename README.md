@@ -1,1 +1,2 @@
-# Calculadora_HectorHuenchunan
+# Calculadora_Androidv1
+Calculadora en Android Studio
