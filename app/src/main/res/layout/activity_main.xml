@@ -9,6 +9,22 @@
 
 
     <TextView
+        android:id="@+id/Textview_Result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="16dp"
+        android:hint="0.0"
+        android:textAlignment="textEnd"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Textview_1"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
         android:id="@+id/Textview_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -23,34 +39,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/Textview_Operacion"
+        android:layout_width="373dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="textEnd"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Textview_1"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <TextView
         android:id="@+id/Textview_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="16dp"
         android:hint="0.0"
         android:textAlignment="textEnd"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Textview_1"
-        tools:ignore="TouchTargetSizeCheck" />
-
-
-    <TextView
-        android:id="@+id/Textview_Result"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="16dp"
-        android:hint="0.0"
-        android:textAlignment="textEnd"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Textview_1"
         tools:ignore="TouchTargetSizeCheck" />
@@ -63,17 +79,17 @@
         android:onClick="SelectionNumber"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnPunto"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorrar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/btnPunto"
+        android:id="@+id/btnBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
-        android:text="."
+        android:onClick="Borrar"
+        android:text="C"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn0"
         app:layout_constraintEnd_toStartOf="@+id/btnIgual"
         app:layout_constraintHorizontal_bias="0.5"
@@ -83,12 +99,12 @@
         android:id="@+id/btnIgual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="botonigual"
+        android:onClick="Resultado"
         android:text="="
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnPunto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnBorrar"
         app:layout_constraintEnd_toStartOf="@+id/btnDividir"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnPunto" />
+        app:layout_constraintStart_toEndOf="@+id/btnBorrar" />
 
     <Button
         android:id="@+id/btnDividir"
@@ -105,7 +121,7 @@
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="1"
         app:layout_constraintBottom_toTopOf="@+id/btn0"
         app:layout_constraintEnd_toStartOf="@+id/btn2"
@@ -116,7 +132,7 @@
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="2"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn1"
         app:layout_constraintEnd_toStartOf="@+id/btn3"
@@ -127,7 +143,7 @@
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="3"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
         app:layout_constraintEnd_toStartOf="@+id/btnMult"
@@ -150,7 +166,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="4"
         app:layout_constraintBottom_toTopOf="@+id/btn1"
         app:layout_constraintEnd_toStartOf="@+id/btn5"
@@ -161,7 +177,7 @@
         android:id="@+id/btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="5"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn4"
         app:layout_constraintEnd_toStartOf="@+id/btn6"
@@ -172,7 +188,7 @@
         android:id="@+id/btn6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="6"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn5"
         app:layout_constraintEnd_toStartOf="@+id/btnRestar"
@@ -195,7 +211,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="7"
         app:layout_constraintBottom_toTopOf="@+id/btn4"
         app:layout_constraintEnd_toStartOf="@+id/btn8"
@@ -206,7 +222,7 @@
         android:id="@+id/btn8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="8"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn7"
         app:layout_constraintEnd_toStartOf="@+id/btn9"
@@ -217,7 +233,7 @@
         android:id="@+id/btn9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="SelectionNumber"
+        android:onClick="SeleccionNumero"
         android:text="9"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn8"
         app:layout_constraintEnd_toStartOf="@+id/btnSumar"
@@ -228,19 +244,11 @@
         android:id="@+id/btnSumar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="clicOperacion"
+        android:onClick="SeleccionOperacion"
         android:text="+"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn9" />
-
-    <Button
-        android:id="@+id/btnBorrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="C"
-        app:layout_constraintBottom_toTopOf="@+id/btnSumar"
-        app:layout_constraintEnd_toEndOf="@+id/btnSumar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
